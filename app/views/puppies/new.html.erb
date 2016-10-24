@@ -1,2 +1,22 @@
-<h1>Puppies#new</h1>
-<p>Find me in app/views/puppies/new.html.erb</p>
+<h1>New Puppy</h1>
+<%= form_for @puppy do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :breed %>
+    <%= f.text_field :breed %>
+  </div>
+  <div>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div>
+  <div>
+    <%= f.label :tricks %>
+    <%= f.check_box :tricks %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
